@@ -74,9 +74,50 @@ const checkBaggage = function (items) {
   const baggage = items.toLowerCase();
   if (baggage.includes("knife") || baggage.includes("gun")) {
     console.log("You are not allowed on board 😬");
+  } else {
+    console.log("Welcome aboard!!!");
   }
 };
 
 checkBaggage("I have a Laptop, some Food and a pocket Knife");
 checkBaggage("Socks and camera");
 checkBaggage("Got some snacks and a gun for protection");
+
+console.log("a+very+nice+string".split("+"));
+console.log("ASHU SINGH".split(" "));
+
+const [firstName, lastName] = "Ashu Singh".split(" ");
+const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+console.log(newName);
+
+// Function to capitalize the first letter
+const capitalizeName = function (name) {
+  const names = name.split(" ");
+  const namesUpper = [];
+  for (const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(" "));
+};
+
+capitalizeName("jessica ann smith davis");
+
+// 1 Possible Solution
+
+// let to_cap = true;
+// const target = "ashu singh kushwaha";
+// let result = "";
+
+// for (let element of target) {
+//   if (element != " ") {
+//     if (to_cap) result += element.toUpperCase();
+//     else result += element;
+//     to_cap = false;
+//   } else if (element == " ") {
+//     result += " ";
+//     to_cap = true;
+//   }
+// }
+
+// Padding a String
