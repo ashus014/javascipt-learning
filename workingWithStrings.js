@@ -121,3 +121,26 @@ capitalizeName("jessica ann smith davis");
 // }
 
 // Padding a String
+const message = "Go to gate 23";
+console.log(message.padStart(25, "+").padEnd(35, "+"));
+console.log("Ashu".padStart(25, "+"));
+
+const maskCreditCard = function (number) {
+  const str = number + "";
+  const last = str.slice(-4);
+  return last.padStart(str.length, "*");
+};
+
+console.log(maskCreditCard(123456789321));
+
+// Repeat
+const message2 = "Bad weather...All deprature delayed...";
+console.log(message2.repeat(4));
+
+const planesInLine = function (n) {
+  console.log(`There are ${n} planes in line ${"🛩".repeat(n)}`);
+};
+
+planesInLine(5);
+planesInLine(3);
+planesInLine(8);
