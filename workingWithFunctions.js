@@ -83,18 +83,74 @@
 
 // functions returning functions
 
-const greet = function (greeting) {
-  return function (name) {
-    console.log(`${greeting} ${name}`);
-  };
-};
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
 
-const greeterHey = greet("Hey");
-greeterHey("Ashu");
-greeterHey("Akash");
+// const greeterHey = greet("Hey");
+// greeterHey("Ashu");
+// greeterHey("Akash");
 
-greet("Good Afternoon!")("Mr. Bond");
+// greet("Good Afternoon!")("Mr. Bond");
 
-// re-writing above greet function using arrow function
-const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
-greet("Good Evening!")("Ethan Hunt");
+// // re-writing above greet function using arrow function
+// const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
+// greet("Good Evening!")("Ethan Hunt");
+
+// ***********************************
+
+// 'call' method in Java Script
+
+// const indigo = {
+//   airline: "INDIGO",
+//   iataCode: "6E",
+//   bookigs: [],
+//   book(flightNum, name) {
+//     console.log(`${name} booked a seat on ${this.airline}
+//     flight ${this.iataCode}${flightNum}`);
+//     this.bookigs.push({ flight: `${this.iataCode}${flightNum}`, name });
+//   },
+// };
+
+// indigo.book("167", "Ashu Singh");
+// console.log(indigo);
+
+// const eurowings = {
+//   name: "Eurowings",
+//   iataCode: "EW",
+//   bookigs: [],
+// };
+
+// const book = indigo.book;
+
+// book.call(eurowings, 23, "Akash");
+// console.log(eurowings);
+
+// book.call(indigo, 456, "Anukriti");
+// console.log(indigo);
+
+// // 'bind' method in Java Script
+
+// const bookEW = book.bind(indigo);
+// bookEW(23, "Muskaan");
+// const bookEW23 = book.bind(indigo, 23);
+// bookEW23("Kushi");
+
+// ***********************************
+
+// immediately invoked function expression
+
+(function () {
+  console.log("This will never run again");
+})();
+
+// ***********************************
+
+// 'closure' in JS
+// closure happens in certain situations, we just need to understand
+// those situations
+
+// a closure makes a function remember all the variables that existed
+// at function birth place.
