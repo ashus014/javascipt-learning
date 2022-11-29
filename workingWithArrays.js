@@ -162,8 +162,16 @@
 
 const movements = [7, -14, 21, -28, 35, -42, 49, -56, 63, -70];
 
-const balance = movements.reduce((acc, curr, i, arr) => {
-  return acc + curr;
-}, 0);
+// const balance = movements.reduce((acc, curr, i, arr) => {
+//   return acc + curr;
+// }, 0);
 
-console.log(balance);
+// console.log(balance);
+
+// find maximum value
+
+const maxValue = movements.reduce((acc, currVal) => {
+  return acc > currVal ? acc : currVal;
+}, movements[0]);
+
+console.log(maxValue);
