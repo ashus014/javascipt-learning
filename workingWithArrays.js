@@ -128,21 +128,42 @@
 // reduce() -> reduces all array eleemt down to one single value.
 // snowball effect
 
-//MAP
+// MAP
 
-const movements = [7, -14, 21, -28, 35, -42, 49, -56, 63, -70];
+// const movements = [7, -14, 21, -28, 35, -42, 49, -56, 63, -70];
 
-const euroToUsd = 1.1;
-const movementsUSD = movements.map((mov) => {
-  return mov * euroToUsd;
-});
-console.log(movements);
-console.log(movementsUSD);
+// const euroToUsd = 1.1;
+// const movementsUSD = movements.map((mov) => {
+//   return mov * euroToUsd;
+// });
+// console.log(movements);
+// console.log(movementsUSD);
 
 // using same using for of loop
 
-const movementsUSDfor = [];
-for (const mov of movements) {
-  movementsUSDfor.push(mov * euroToUsd);
-}
-console.log(movementsUSDfor);
+// const movementsUSDfor = [];
+// for (const mov of movements) {
+//   movementsUSDfor.push(mov * euroToUsd);
+// }
+// console.log(movementsUSDfor);
+
+// FILTER
+
+// const deposit = movements.filter((num) => num > 0);
+// console.log(deposit);
+
+// const withdrawals = movements.filter((num) => num < 0);
+// console.log(withdrawals);
+
+// REDUCE
+
+// accumulator is like a snowball
+// setting initial value to '0'
+
+const movements = [7, -14, 21, -28, 35, -42, 49, -56, 63, -70];
+
+const balance = movements.reduce((acc, curr, i, arr) => {
+  return acc + curr;
+}, 0);
+
+console.log(balance);
